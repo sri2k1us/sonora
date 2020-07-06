@@ -21,7 +21,10 @@ import NavigationConstants from "../../common/NavigationConstants";
 import Notifications from "./Notifications";
 import CustomIntercom from "./CustomIntercom";
 import { useUserProfile } from "../../contexts/userProfile";
-import { getUserProfile } from "../../serviceFacades/users";
+import {
+    getUserProfile,
+    USER_PROFILE_QUERY_KEY,
+} from "../../serviceFacades/users";
 
 import {
     build,
@@ -223,7 +226,7 @@ function CyverseAppBar(props) {
     const [adminUser, setAdminUser] = useState(false);
 
     useQuery({
-        queryKey: "getUserProfile",
+        queryKey: USER_PROFILE_QUERY_KEY,
         queryFn: getUserProfile,
         config: {
             enabled: true,

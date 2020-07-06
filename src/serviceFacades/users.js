@@ -5,6 +5,8 @@ import callApi from "../common/callApi";
  * @param userIds An array of user ids
  * @returns {Promise<any>}
  */
+export const USER_PROFILE_QUERY_KEY = "fetchUserProfile";
+
 export const getUserInfo = ({ userIds }) => {
     const userQuery = userIds.join("&username=");
 
