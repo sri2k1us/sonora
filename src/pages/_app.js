@@ -8,6 +8,7 @@ import React, { useState } from "react";
 
 import { appWithTranslation, useTranslation } from "i18n";
 import "./styles.css";
+import "tui-image-editor/dist/tui-image-editor.css";
 import { ConfigProvider } from "../contexts/config";
 import CyverseAppBar from "../components/layout/CyVerseAppBar";
 import NavigationConstants from "../common/NavigationConstants";

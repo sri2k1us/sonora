@@ -7,6 +7,8 @@
  */
 import React, { useEffect, useState } from "react";
 
+import ImageEditor from "@toast-ui/react-image-editor";
+
 import PageWrapper from "components/layout/PageWrapper";
 import { useTranslation } from "i18n";
 
@@ -37,11 +39,32 @@ export default function ImageViewer(props) {
                     onRefresh={onRefresh}
                     fileName={fileName}
                 />
-                <img
+                {/*  <img
                     id={build(baseId, ids.VIEWER_IMAGE, fileName)}
                     src={`${url}`}
                     alt={fileName}
                     style={{ overflow: "auto" }}
+                /> */}
+                <ImageEditor
+                    includeUI={{
+                        loadImage: {
+                            path: `${url}`,
+                            name: `${fileName}`,
+                        },
+                        initMenu: "filter",
+                        uiSize: {
+                            width: "1000px",
+                            height: "700px",
+                        },
+                        menuBarPosition: "bottom",
+                    }}
+                    cssMaxHeight={500}
+                    cssMaxWidth={700}
+                    selectionStyle={{
+                        cornerSize: 20,
+                        rotatingPointOffset: 70,
+                    }}
+                    usageStatistics={true}
                 />
             </PageWrapper>
         );
