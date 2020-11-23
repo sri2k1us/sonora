@@ -31,6 +31,8 @@ import {
     submitAnalysisSupportRequest,
 } from "serviceFacades/support";
 
+import Usage from "../toolbar/Usage";
+
 import { canShare, openInteractiveUrl } from "../utils";
 
 import ConfirmationDialog from "../../utils/ConfirmationDialog";
@@ -659,6 +661,7 @@ function Listing(props) {
 
     return (
         <>
+            {data && <Usage counts={data["status-count"]} /> }
             <AnalysesToolbar
                 baseId={baseId}
                 selected={selected}
