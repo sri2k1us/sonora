@@ -12,7 +12,7 @@ import TableRow from "@material-ui/core/TableRow";
 export const DERow = withStyles((theme) => ({
     root: {
         "&:nth-of-type(odd)": {
-            backgroundColor: "#f7f7f7",
+            backgroundColor: theme.palette.secondary,
         },
     },
 }))(TableRow);

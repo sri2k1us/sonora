@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
     },
     appBar: {
-        backgroundColor: theme.palette.primary,
+        backgroundColor: theme.palette.primary.main,
         zIndex: theme.zIndex.drawer + 1,
         width: "100%",
         [theme.breakpoints.up("sm")]: {
@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
     accountIcon: {
         cursor: "pointer",
         color: theme.palette.primary.contrastText,
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.primary,
         width: theme.spacing(5),
         height: theme.spacing(5),
     },
@@ -135,7 +135,7 @@ const useStyles = makeStyles((theme) => ({
         whiteSpace: "nowrap",
     },
     drawerOpen: {
-        backgroundColor: theme.palette.info.main,
+        backgroundColor: theme.palette.info,
         color: theme.palette.info.contrastText,
         width: drawerWidth,
         [theme.breakpoints.up("sm")]: {
@@ -147,7 +147,7 @@ const useStyles = makeStyles((theme) => ({
     },
     drawerClose: {
         [theme.breakpoints.up("sm")]: {
-            backgroundColor: theme.palette.info.main,
+            backgroundColor: theme.palette.info,
             color: theme.palette.info.contrastText,
             transition: theme.transitions.create("width", {
                 easing: theme.transitions.easing.sharp,
