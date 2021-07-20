@@ -6,7 +6,7 @@
  *
  */
 import React, { useEffect, useState } from "react";
-import { Controlled as CodeMirror } from "react-codemirror2";
+import { Controlled as CodeMirror } from "react17-codemirror2";
 
 import buildID from "components/utils/DebugIDUtil";
 
